@@ -4,7 +4,7 @@ import {
   createTheme,
   responsiveFontSizes,
 } from "@mui/material/styles";
-import banner from "../../../../assets/BannerImage/banner.png";
+import banner from "../../../../assets/BannerImage/banner.jpg";
 import { TypeAnimation } from "react-type-animation";
 
 import { MdOutlineFileDownload } from "react-icons/md";
@@ -31,8 +31,8 @@ const Banner = () => {
 
   return (
     <>
-      <div className="bg-[#faf3ec] pt-24 lg:pt-36">
-        <Box className="flex flex-col-reverse gap-10 lg:gap-0 lg:flex-row justify-between items-center w-[70%] mx-auto">
+      <div className="bg-[#faf3ec] pt-32 lg:pt-48">
+        <Box className="flex flex-col-reverse gap-10 lg:gap-0 lg:flex-row justify-between items-center w-[80%] lg:w-[70%] mx-auto">
           <Box className="space-y-3 lg:w-[60%]">
             <ThemeProvider theme={theme}>
               <Typography variant="h2">
@@ -79,11 +79,18 @@ const Banner = () => {
             </button>
           </Box>
           <Box>
-            <img src={banner} alt="" />
+            <div className="bg-white pt-5 rounded-t-3xl border overflow-hidden">
+              <img className="relative top-2" src={banner} alt="" />
+            </div>
           </Box>
         </Box>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#faf3ec" d="M0,96L48,90.7C96,85,192,75,288,101.3C384,128,480,192,576,197.3C672,203,768,149,864,154.7C960,160,1056,224,1152,245.3C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#faf3ec"
+          d="M0,96L48,90.7C96,85,192,75,288,101.3C384,128,480,192,576,197.3C672,203,768,149,864,154.7C960,160,1056,224,1152,245.3C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+        ></path>
+      </svg>
     </>
   );
 };

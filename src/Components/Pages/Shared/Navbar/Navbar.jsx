@@ -25,12 +25,18 @@ function Navbar() {
   };
 
   return (
-    <AppBar sx={{ backgroundColor: "white", color: "black", padding: "10px 0px", boxShadow: "none" }} position="static">
+    <AppBar
+      sx={{
+        backgroundColor: "#faf3ec",
+        position: "stickey",
+        color: "black",
+        padding: "10px 0px",
+        boxShadow: "none",
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box>
-           
-          </Box>
+          <Box></Box>
           <Typography
             variant="h6"
             noWrap
@@ -46,8 +52,8 @@ function Navbar() {
             }}
           >
             <p className="text-2xl">
-            M-Web <br />
-            Center
+              M-Web <br />
+              Center
             </p>
           </Typography>
 
@@ -82,7 +88,9 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
