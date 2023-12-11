@@ -27,9 +27,9 @@ function Navbar() {
   return (
     <AppBar
       sx={{
-        backgroundColor: "#faf3ec",
+        backgroundColor: "#121b245e",
         position: "stickey",
-        color: "black",
+        color: "white",
         padding: "10px 0px",
         boxShadow: "none",
       }}
@@ -125,7 +125,7 @@ function Navbar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", display: "block" }}
+                sx={{ my: 2, color: "white", display: "block" }}
               >
                 <p className="text-lg font-medium mx-5">{page}</p>
               </Button>

@@ -31,14 +31,14 @@ const Banner = () => {
 
   return (
     <>
-      <div className="bg-[#faf3ec] pt-32 lg:pt-48">
+      <div className="bg-gradient-to-b from-[#121b24] to-[#2d435a] pt-32 lg:pt-48">
         <Box className="flex flex-col-reverse gap-10 lg:gap-0 lg:flex-row justify-between items-center w-[80%] lg:w-[70%] mx-auto">
           <Box className="space-y-3 lg:w-[60%]">
             <ThemeProvider theme={theme}>
               <Typography variant="h2">
-                <h1>
+                <h1 className="text-white">
                   Hi, I'm{" "}
-                  <span className="font-semibold text-blue-400">
+                  <span className="font-semibold text-blue-300">
                     Mehedi Hasan
                   </span>
                 </h1>
@@ -55,7 +55,7 @@ const Banner = () => {
                   speed={50}
                   style={{
                     display: "inline-block",
-                    color: "rgb(96, 165, 250)",
+                    color: "rgb(147, 197, 253)",
                   }}
                   repeat={Infinity}
                 />
@@ -87,7 +87,7 @@ const Banner = () => {
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#faf3ec"
+          fill="#2d435a"
           d="M0,96L48,90.7C96,85,192,75,288,101.3C384,128,480,192,576,197.3C672,203,768,149,864,154.7C960,160,1056,224,1152,245.3C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
         ></path>
       </svg>
