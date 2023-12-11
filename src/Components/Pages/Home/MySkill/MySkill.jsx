@@ -12,8 +12,11 @@ import node from "../../../../assets/icons/node-js.svg";
 import mongo from "../../../../assets/icons/mongo.svg";
 
 const MySkill = () => {
+
+    
+
   return (
-    <div className="mt-36 bg-slate-100 py-36">
+    <div className="mt-36 py-36 bg-slate-100">
       <Container>
         <Typography variant="h3" className="text-center">
           <p className="font-bold">My <span className="text-blue-400">Skills</span></p>
