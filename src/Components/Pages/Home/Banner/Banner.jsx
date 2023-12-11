@@ -4,7 +4,7 @@ import {
   createTheme,
   responsiveFontSizes,
 } from "@mui/material/styles";
-import banner from "../../../../assets/BannerImage/banner.jpg";
+import banner from '../../../../assets/BannerImage/banner.png';
 import { TypeAnimation } from "react-type-animation";
 
 import { MdOutlineFileDownload } from "react-icons/md";
@@ -31,7 +31,7 @@ const Banner = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-b from-[#121b24] to-[#2d435a] pt-32 lg:pt-48">
+      <div className="bg-gradient-to-b from-[#121b24] to-[#2d435a] pt-24 lg:pt-48">
         <Box className="flex flex-col-reverse gap-10 lg:gap-0 lg:flex-row justify-between items-center w-[80%] lg:w-[70%] mx-auto">
           <Box className="space-y-3 lg:w-[60%]">
             <ThemeProvider theme={theme}>
@@ -78,9 +78,9 @@ const Banner = () => {
               <MdOutlineFileDownload className="text-xl md:text-3xl" />
             </button>
           </Box>
-          <Box>
-            <div className="bg-white pt-5 rounded-t-3xl border overflow-hidden">
-              <img className="relative top-2" src={banner} alt="" />
+          <Box className='lg:w-[30%]'>
+            <div className="bg-white rounded-t-3xl border overflow-hidden">
+              <img className="relative top-10" src={banner} alt="" />
             </div>
           </Box>
         </Box>
