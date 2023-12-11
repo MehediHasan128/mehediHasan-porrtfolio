@@ -1,17 +1,9 @@
 import { Box, Typography } from "@mui/material";
-import {
-  ThemeProvider,
-  createTheme,
-  responsiveFontSizes,
-} from "@mui/material/styles";
 import banner from '../../../../assets/BannerImage/banner.png';
 import { TypeAnimation } from "react-type-animation";
 
 import { MdOutlineFileDownload } from "react-icons/md";
 import axios from "axios";
-
-let theme = createTheme();
-theme = responsiveFontSizes(theme);
 
 const Banner = () => {
   const handelDownload = () => {
@@ -34,7 +26,6 @@ const Banner = () => {
       <div className="bg-gradient-to-b from-[#121b24] to-[#2d435a] pt-24 lg:pt-48">
         <Box className="flex flex-col-reverse gap-10 lg:gap-0 lg:flex-row justify-between items-center w-[80%] lg:w-[70%] mx-auto">
           <Box className="space-y-3 lg:w-[60%]">
-            <ThemeProvider theme={theme}>
               <Typography variant="h2">
                 <h1 className="text-white">
                   Hi, I'm{" "}
@@ -69,7 +60,6 @@ const Banner = () => {
                   together!
                 </p>
               </Typography>
-            </ThemeProvider>
             <button
               onClick={handelDownload}
               className="flex items-center gap-2 md:text-lg font-semibold bg-blue-400 px-5 py-3 rounded-full text-white hover:bg-blue-500 duration-500"

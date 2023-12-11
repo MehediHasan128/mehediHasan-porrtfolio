@@ -1,35 +1,20 @@
 import { Box, Container, Typography } from "@mui/material";
 import img from "../../../../assets/BannerImage/about.jpg";
-import html from "../../../../assets/icons/html-5.svg";
-import css from "../../../../assets/icons/css-3.svg";
-import js from "../../../../assets/icons/javascript.svg";
-import react from "../../../../assets/icons/react.svg";
-import router from "../../../../assets/icons/router.svg";
-import firebase from "../../../../assets/icons/firebase.svg";
-import mongo from "../../../../assets/icons/mongo.svg";
-import node from "../../../../assets/icons/node-js.svg";
-
-import { FaGithub } from "react-icons/fa";
-import {
-  ThemeProvider,
-  createTheme,
-  responsiveFontSizes,
-} from "@mui/material/styles";
-
-let theme = createTheme();
-theme = responsiveFontSizes(theme);
+import { MdDateRange } from "react-icons/md";
+import { FaPhoneAlt, FaGithub } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+import { FaLocationDot } from "react-icons/fa6";
 
 const AboutMe = () => {
   return (
     <div>
       <Container>
-        <ThemeProvider theme={theme}>
           <Typography variant="h3" className="text-center">
             <h2 className="font-semibold mb-10 lg:mb-20">About Me</h2>
           </Typography>
-          <Box className="flex justify-center items-center gap-24">
-            <Box className="hidden lg:flex">
-              <div className="bg-slate-50 w-[450px] h-[450px] rounded-full overflow-hidden">
+          <Box className="flex flex-col lg:flex-row justify-center items-center gap-24">
+            <Box>
+              <div className="bg-slate-50 w-[380px] h-[380px] lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden shadow-xl">
                 <img src={img} alt="" />
               </div>
             </Box>
@@ -40,7 +25,7 @@ const AboutMe = () => {
                 </p>
               </Typography>
               <Typography variant="subtitle1">
-                <p className="font-medium">
+                <p className="font-medium mb-10">
                   Hello! I’m Mehedi Hasan Bayzid, a MERN Stack developer. I’m
                   also studying at Uttara University Department of Computer
                   Science and Engineering. Web development is a passion for me.
@@ -49,42 +34,31 @@ const AboutMe = () => {
                   projects.
                 </p>
               </Typography>
-              <Typography variant="h5">
-                <p className="mt-10 font-semibold">My Skills</p>
-              </Typography>
-              <Box className="grid grid-cols-2 lg:grid-cols-4 gap-2">
-                <div className="flex items-center justify-center gap-2 bg-slate-200 px-5 py-2 rounded-lg">
-                  <Typography variant="body1">HTML5</Typography>
-                  <img className="w-10" src={html} alt="" />
-                </div>
-                <div className="flex items-center justify-center gap-2 bg-slate-200 px-5 py-2 rounded-lg">
-                  <Typography variant="body1">CSS3</Typography>
-                  <img className="w-10" src={css} alt="" />
-                </div>
-                <div className="flex items-center justify-center gap-2 bg-slate-200 px-5 py-2 rounded-lg">
-                  <Typography variant="body1">JavaScript</Typography>
-                  <img className="w-10" src={js} alt="" />
-                </div>
-                <div className="flex items-center justify-center gap-2 bg-slate-200 px-5 py-2 rounded-lg">
-                  <Typography variant="body1">React</Typography>
-                  <img className="w-10" src={react} alt="" />
-                </div>
-                <div className="flex items-center justify-center gap-2 bg-slate-200 px-5 py-2 rounded-lg">
-                  <Typography variant="body1">React Router</Typography>
-                  <img className="w-10" src={router} alt="" />
-                </div>
-                <div className="flex items-center justify-center gap-2 bg-slate-200 px-5 py-2 rounded-lg">
-                  <Typography variant="body1">Firebase</Typography>
-                  <img className="w-10" src={firebase} alt="" />
-                </div>
-                <div className="flex items-center justify-center gap-2 bg-slate-200 px-5 py-2 rounded-lg">
-                  <Typography variant="body1">MongoDB</Typography>
-                  <img className="w-10" src={mongo} alt="" />
-                </div>
-                <div className="flex items-center justify-center gap-2 bg-slate-200 px-5 py-2 rounded-lg">
-                  <Typography variant="body1">Node JS</Typography>
-                  <img className="w-10" src={node} alt="" />
-                </div>
+              <Box className="grid lg:grid-cols-2 gap-10">
+                <Typography>
+                    <p className="flex items-center gap-3">
+                      <IoIosMail className="text-2xl text-blue-500" />
+                      mehedihasan120255@gmail.com
+                    </p>
+                </Typography>
+                <Typography>
+                    <p className="flex items-center gap-3">
+                      <FaPhoneAlt className="text-2xl text-blue-500" />
+                      (+88) 01302557956
+                    </p>
+                </Typography>
+                <Typography>
+                    <p className="flex items-center gap-3">
+                      <MdDateRange className="text-2xl text-blue-500" />
+                      21 August, 2000
+                    </p>
+                </Typography>
+                <Typography>
+                    <p className="flex items-center gap-3">
+                      <FaLocationDot className="text-2xl text-blue-500" />
+                      mehedihasan120255@gmail.com
+                    </p>
+                </Typography>
               </Box>
               <Box>
                 <button className="bg-black text-white px-5 py-3 rounded-xl mt-10">
@@ -98,7 +72,6 @@ const AboutMe = () => {
               </Box>
             </Box>
           </Box>
-        </ThemeProvider>
       </Container>
     </div>
   );

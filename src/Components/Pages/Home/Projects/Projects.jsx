@@ -1,25 +1,16 @@
 import { Box, Container, Typography } from "@mui/material";
 import { GoDotFill } from "react-icons/go";
-import {
-  ThemeProvider,
-  createTheme,
-  responsiveFontSizes,
-} from "@mui/material/styles";
 
 import project1 from "../../../../assets/project/project1.png";
 import project2 from "../../../../assets/project/project2.png";
 import project3 from "../../../../assets/project/project3.png";
 
-let theme = createTheme();
-theme = responsiveFontSizes(theme);
-
 const Projects = () => {
   return (
-    <div className="bg-slate-100">
-      <ThemeProvider theme={theme}>
-        <Container className="mt-36 py-20">
-          <Typography variant="h3">
-            <p className="font-semibold">My Projects</p>
+    <div>
+        <Container className="py-20">
+          <Typography className="text-center" variant="h3">
+            <p className="font-semibold">My <span className="text-blue-400">Projects</span></p>
           </Typography>
 
           <Box className="mt-20 flex flex-col lg:flex-row justify-center gap-5">
@@ -119,7 +110,6 @@ const Projects = () => {
             </div>
           </Box>
         </Container>
-      </ThemeProvider>
     </div>
   );
 };
